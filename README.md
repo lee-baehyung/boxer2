@@ -14,6 +14,7 @@
   #### :mortar_board: 어...이거 하다가 머리 **Boom** :man_facepalming: .. :person_in_manual_wheelchair: 
   #### :warning: 지금은 백엔드에 집중할께요 :warning: 
   #### :sob:   리드미..나중에 리드미.. :sob: 
+  #### :dizzy_face:  i'm so sry  :dizzy_face: 
   <br/>
   <br/>
   
