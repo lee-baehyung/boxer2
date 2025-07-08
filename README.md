@@ -1,14 +1,8 @@
 # boxer2
-<div class="header-container">
-  <header class="header">
-    <h1 class="logo glitch-neon" data-text="⚡ MyCoolSite">⚡ MyCoolSite</h1>
-    <nav class="nav">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+<div>
+  <!--Header-->
+  ![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Good%20to%20see%20you%20%F0%9F%A4%97)
+  
 </div>
 
   <!--Body-->
