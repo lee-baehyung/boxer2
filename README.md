@@ -1,7 +1,7 @@
 # boxer2
 <div>
   <!--Header-->
-  
+   <header class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between text-white animate-fade-in">
 </div>
 
 <div>
