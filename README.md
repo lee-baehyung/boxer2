@@ -2,7 +2,8 @@
 <div>
   <!--Header-->
   https://assets.pinterest.com/ext/embed.html?id=29766047531565371" height="437" width="450" frameborder="0" scrolling="no"
-  백엔드 개발자가 되기 위해 열심히 노력중 입니다.
+  
+  **백엔드 개발자가 되기 위해 열심히 노력중 입니다.**
 </div>
 
   <!--Body-->
@@ -34,7 +35,7 @@
 
   
   ### ETC
-  <!--Amazon AWS-->
+ <!--Amazon AWS-->
   <img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=flat-square&logo=Amazon AWS&logoColor=white"/>
   <!--MySQL-->
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/>
