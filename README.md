@@ -1,13 +1,13 @@
 # boxer2
 <div>
   <!--Header-->
-  https://pin.it/6OdMzLrNq
+  https://pann.nate.com/attach/imageView?source_url=https%3A%2F%2Ffimg5.pann.com%2Fnew%2Fdownload.jsp%3FFileID%3D65272207&cate_cd=20025
 </div>
 
 <div>
   <!--Body-->
   
-  ## 👀 About Me
+  ## 👀 소개
   #### :raising_hand: 저는 백엔드 개발자가 되기 위해 공부중인 사람입니다 <br/>
   #### :fire: I aim to become a ...<br/>
   #### :mortar_board: ...
