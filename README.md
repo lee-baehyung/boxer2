@@ -2,7 +2,7 @@
 <div>
   <!--Header-->
   
-  <img src="https://assets.pinterest.com/ext/embed.html?id=29766047531565371"> 
+  <img src="https://img.insight.co.kr/static/2018/02/03/700/4249k18fbm0u9n4ndex2.jpg"> 
   
  :trophy:  **백엔드 개발자가 되기 위해 열심히 노력중 입니다.** :trophy: 
 </div>
