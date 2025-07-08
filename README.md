@@ -9,7 +9,7 @@
   <!--Body-->
   
   ## 👀 About Me
-  #### :raising_hand: I am a ...<br/>
+  #### :raising_hand: 저는 백엔드 개발자가 되기 위해 공부중인 사람입니다 <br/>
   #### :fire: I aim to become a ...<br/>
   #### :mortar_board: ...
   <br/>
