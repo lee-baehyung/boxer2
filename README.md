@@ -1,8 +1,8 @@
-# 안녕하세요 👀 저는 Bae Hyung입니다. 
+# 안녕하세요 👀 저는 Lee Bae Hyung입니다. 
 <div>
   <!--Header-->
   https://assets.pinterest.com/ext/embed.html?id=29766047531565371" height="437" width="450" frameborder="0" scrolling="no"
-  
+  백엔드 개발자가 되기 위해 열심히 노력중 입니다.
 </div>
 
   <!--Body-->
