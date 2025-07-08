@@ -1,7 +1,14 @@
 # boxer2
-<div>
-  <!--Header-->
-   <header class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between text-white animate-fade-in">
+<div class="header-container">
+  <header class="header">
+    <h1 class="logo glitch-neon" data-text="⚡ MyCoolSite">⚡ MyCoolSite</h1>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 </div>
 
 <div>
