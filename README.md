@@ -1,7 +1,15 @@
 # boxer2
 <div>
   <!--Header-->
-  <iframe src="https://assets.pinterest.com/ext/embed.html?id=29766047531565371" height="437" width="450" frameborder="0" scrolling="no" ></iframe>
+  <style>
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out;
+}
+</style>
 </div>
 
 <div>
@@ -9,7 +17,7 @@
   
   ## 👀 소개
   #### :raising_hand: 저는 백엔드 개발자가 되기 위해 공부중인 사람입니다 <br/>
-  #### :fire: I aim to become a ...<br/>
+  #### :fire: 6개월간의 캠프를 근성으로 <br/>
   #### :mortar_board: ...
   <br/>
   <br/>
