@@ -1,17 +1,19 @@
-# 안녕하세요 👀 저는 Lee Bae Hyung입니다. 
+# 안녕하세요 👀 저는 Lee Bae Hyung입니다. 👋👋👋
 <div>
   <!--Header-->
   https://assets.pinterest.com/ext/embed.html?id=29766047531565371" height="437" width="450" frameborder="0" scrolling="no"
   
-  **백엔드 개발자가 되기 위해 열심히 노력중 입니다.**
+ :trophy:  **백엔드 개발자가 되기 위해 열심히 노력중 입니다.** :trophy: 
 </div>
 
   <!--Body-->
   
-  ## 👀 소개
+  ## 👀 소개 
   #### :raising_hand: 저는 백엔드 개발자가 되기 위해 공부중인 사람입니다 <br/>
   #### :fire: 6개월간의 캠프를 근성으로 <br/>
-  #### :mortar_board: ...
+  #### :mortar_board: 어...이거 하다가 머리 **Boom** :man_facepalming: .. :person_in_manual_wheelchair: 
+  #### :warning: 지금은 백엔드에 집중할께요 :warning: 
+  #### :sob:   리드미..나중에 리드미.. :sob: 
   <br/>
   <br/>
   
@@ -21,15 +23,9 @@
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/>
   <!--JavaScript-->
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/>
-  <!--HTML5-->
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>
-  <!--CSS-->
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/>
   <br/>
   
   ### Framework
-  <!--Flask-->
-  <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=Flask&logoColor=white"/>
   <!--Django-->
   <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=Django&logoColor=white"/>
 
