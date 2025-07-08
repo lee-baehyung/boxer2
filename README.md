@@ -1,8 +1,7 @@
 # boxer2
 <div>
   <!--Header-->
-  <script src="https://cdn.tailwindcss.com"></script>
-
+  
 </div>
 
 <div>
