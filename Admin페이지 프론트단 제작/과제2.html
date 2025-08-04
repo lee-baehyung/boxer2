@@ -141,6 +141,54 @@
       .time-display {
         font-weight: bold;
       }
+
+      .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      } 
+
+      .modal-content {
+      background-color: #222;
+      color: white;
+      margin: 10% auto;
+      padding: 30px;
+      border-radius: 10px;
+      width: 400px;
+      box-shadow: 0 0 10px #000;
+      }
+
+      .close {
+      float: right;
+      font-size: 24px;
+      cursor: pointer;
+      }
+
+      .modal-content input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #444;
+      color: white;
+      }
+
+      .modal-content button[type="submit"] {
+      padding: 10px 20px;
+      background-color: #00aaff;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      }
+      .modal-content button[type="submit"]:hover {
+      background-color: #0088cc;
+      }
     </style>
   </head>
   <body>
@@ -189,7 +237,28 @@
         <button>조회</button>
         <button onclick="toggleDarkMode()">🌙 다크모드</button>
         <button onclick="location.href='회원가입최종.html'">회원 가입</button>
-      </div>
+        <button id="openModal">+ 상품 등록</button>
+        <div id="productModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+              <h2>신규 상품 등록</h2>
+                <form id="registerForm">
+                  <label>카테고리</label>
+                  <input type="text" name="category" required>
+
+                  <label>브랜드</label>
+                  <input type="text" name="brand" required>
+
+                  <label>상품명</label>
+                  <input type="text" name="name" required>
+
+                  <label>가격</label>
+                  <input type="number" name="price" required>
+
+                  <button type="submit">등록하기</button>
+                </form>
+            </div>
+        </div>
 
       <table>
         <thead>
@@ -200,44 +269,142 @@
             <th>가격</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>상의</td>
-            <td>Supreme</td>
-            <td>슈프림 박스로고 후드티</td>
-            <td>390,000</td>
-          </tr>
-          <tr>
-            <td>하의</td>
-            <td>DIESEL</td>
-            <td>디젤 트랙 팬츠</td>
-            <td>188,000</td>
-          </tr>
-          <tr>
-            <td>신발</td>
-            <td>Nike</td>
-            <td>에어포스 1</td>
-            <td>137,000</td>
-          </tr>
-          <tr>
-            <td>패션잡화</td>
-            <td>Music&Goods</td>
-            <td>뽀빵이 키링</td>
-            <td>29,000</td>
-          </tr>
+        <tbody id="productTableBody">
         </tbody>
       </table>
-
       <div class="pagination">
-        <button>Previous</button>
-        <button class="active">1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>Next</button>
+        <button onclick="goToPage(currentPage - 1)">Previous</button>
+        <button onclick="goToPage(1)">1</button>
+        <button onclick="goToPage(2)">2</button>
+        <button onclick="goToPage(3)">3</button>
+        <button onclick="goToPage(currentPage + 1)">Next</button>
       </div>
-    </div>
 
     <script>
+      const products = [
+        // 페이지 1
+        {
+          category: "상의",
+          brand: "Supreme",
+          name: "슈프림 박스로고 후드티",
+          price: "390,000",
+        },
+        {
+          category: "하의",
+          brand: "DIESEL",
+          name: "디젤 트랙 팬츠",
+          price: "188,000",
+        },
+        {
+          category: "신발",
+          brand: "Nike",
+          name: "에어포스 1",
+          price: "137,000",
+        },
+        {
+          category: "패션잡화",
+          brand: "Music&Goods",
+          name: "뽀빵이 키링",
+          price: "29,000",
+        },
+
+        // 페이지 2
+        {
+          category: "상의",
+          brand: "ADER",
+          name: "아더에러 니트",
+          price: "280,000",
+        },
+        {
+          category: "하의",
+          brand: "Musinsa",
+          name: "테크 조거 팬츠",
+          price: "49,000",
+        },
+        {
+          category: "신발",
+          brand: "Adidas",
+          name: "이지 부스트 350",
+          price: "299,000",
+        },
+        {
+          category: "패션잡화",
+          brand: "STAYC",
+          name: "포토 키링",
+          price: "19,000",
+        },
+
+        // 페이지 3
+        {
+          category: "상의",
+          brand: "Covernat",
+          name: "베이직 후디",
+          price: "69,000",
+        },
+        {
+          category: "하의",
+          brand: "Lafudgestore",
+          name: "테크 팬츠",
+          price: "89,000",
+        },
+        { category: "신발", brand: "Vans", name: "올드스쿨", price: "79,000" },
+        {
+          category: "패션잡화",
+          brand: "Hyundai",
+          name: "현대모비스 키링",
+          price: "9,900",
+        },
+      ]
+
+      const itemsPerPage = 4
+      let currentPage = 1
+
+      function renderTable(page) {
+        const start = (page - 1) * itemsPerPage
+        const end = start + itemsPerPage
+        const tbody = document.getElementById("productTableBody")
+        tbody.innerHTML = ""
+
+        const pageData = products.slice(start, end)
+        for (const item of pageData) {
+          const row = `
+        <tr>
+          <td>${item.category}</td>
+          <td>${item.brand}</td>
+          <td>${item.name}</td>
+          <td>${item.price}</td>
+        </tr>
+      `
+          tbody.innerHTML += row
+        }
+
+        currentPage = page
+        updatePagination()
+      }
+
+      function updatePagination() {
+        const buttons = document.querySelectorAll(".pagination button")
+        buttons.forEach((btn) => btn.classList.remove("active"))
+        buttons.forEach((btn) => {
+          if (btn.textContent == currentPage.toString()) {
+            btn.classList.add("active")
+          }
+        })
+      }
+
+      function goToPage(page) {
+        const totalPages = Math.ceil(products.length / itemsPerPage)
+        if (page < 1 || page > totalPages) return
+        renderTable(page)
+      }
+
+      // 초기 렌더링
+      window.onload = () => {
+        updateTime()
+        setInterval(updateTime, 1000)
+        renderTable(1)
+      }
+
       // 실시간 날짜/시간 표시
       function updateTime() {
         const now = new Date()
@@ -257,6 +424,35 @@
         const form = document.getElementById("signupForm")
         form.style.display = form.style.display === "block" ? "none" : "block"
       }
+      const modal = document.getElementById("productModal");
+      const openBtn = document.getElementById("openModal");
+      const closeBtn = document.querySelector(".close");
+
+      openBtn.onclick = () => {
+        modal.style.display = "block";
+      };
+
+      closeBtn.onclick = () => {
+        modal.style.display = "none";
+      };
+
+      window.onclick = (event) => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      document.getElementById("registerForm").onsubmit = function(e) {
+        e.preventDefault();
+        const data = {
+          category: this.category.value,
+          brand: this.brand.value,
+          name: this.name.value,
+          price: this.price.value
+        };
+        console.log("등록된 상품:", data);
+        modal.style.display = "none";
+      };
     </script>
   </body>
 </html>
