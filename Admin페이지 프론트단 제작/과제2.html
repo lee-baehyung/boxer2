@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>신규 등록 상품</title>
+    <style>
+      body {
+        background-color: #1e1e1e;
+        padding: 40px;
+        font-family: sans-serif;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      body.light-mode {
+        background-color: #f5f5f5;
+        color: #000;
+      }
+
+      .container {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 24px;
+        max-width: 900px;
+        margin: 0 auto;
+        color: #000;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      body.light-mode .container {
+        background-color: #fff;
+        color: #000;
+      }
+
+      body:not(.light-mode) .container {
+        background-color: #2c2c2c;
+        color: #fff;
+      }
+
+      h2 {
+        margin: 0 0 20px;
+      }
+
+      .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .search-bar {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+
+      select,
+      input[type="text"],
+      button {
+        padding: 8px 12px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      input[type="text"] {
+        flex: 1;
+      }
+
+      button {
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        border: none;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+
+      th,
+      td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+      }
+
+      th:last-child,
+      td:last-child {
+        text-align: right;
+      }
+
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 5px;
+      }
+
+      .pagination button {
+        color: black;
+        padding: 6px 12px;
+        border: 1px solid #007bff;
+        background-color: #f8f9fa;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .pagination button:hover {
+        background-color: #e2e6ea;
+      }
+
+      .pagination .active {
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+      }
+
+      .signup-form {
+        display: none;
+        margin-top: 20px;
+        border-top: 1px solid #aaa;
+        padding-top: 20px;
+      }
+
+      .signup-form input {
+        display: block;
+        margin-bottom: 10px;
+        padding: 8px;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+
+      .time-display {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-bar">
+        <h2>신규 등록 상품</h2>
+        <div
+          class="time-display"
+          id="timeDisplay"
+        >
+          날짜 로딩중...
+        </div>
+      </div>
+
+      <div class="search-bar">
+        <select>
+          <option
+            disabled
+            selected
+          >
+            카테고리
+          </option>
+          <option>상의</option>
+          <option>하의</option>
+          <option>신발</option>
+          <option>패션잡화</option>
+        </select>
+
+        <input
+          type="text"
+          placeholder="제품명을 입력해주세요"
+        />
+
+        <select>
+          <option
+            disabled
+            selected
+          >
+            성별 선택
+          </option>
+          <option>남자</option>
+          <option>여자</option>
+          <option>기타</option>
+        </select>
+
+        <button>조회</button>
+        <button onclick="toggleDarkMode()">🌙 다크모드</button>
+        <button onclick="location.href='회원가입최종.html'">회원 가입</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>카테고리</th>
+            <th>브랜드</th>
+            <th>상품명</th>
+            <th>가격</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>상의</td>
+            <td>Supreme</td>
+            <td>슈프림 박스로고 후드티</td>
+            <td>390,000</td>
+          </tr>
+          <tr>
+            <td>하의</td>
+            <td>DIESEL</td>
+            <td>디젤 트랙 팬츠</td>
+            <td>188,000</td>
+          </tr>
+          <tr>
+            <td>신발</td>
+            <td>Nike</td>
+            <td>에어포스 1</td>
+            <td>137,000</td>
+          </tr>
+          <tr>
+            <td>패션잡화</td>
+            <td>Music&Goods</td>
+            <td>뽀빵이 키링</td>
+            <td>29,000</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="pagination">
+        <button>Previous</button>
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>Next</button>
+      </div>
+    </div>
+
+    <script>
+      // 실시간 날짜/시간 표시
+      function updateTime() {
+        const now = new Date()
+        const formatted = now.toLocaleString("ko-KR")
+        document.getElementById("timeDisplay").textContent = formatted
+      }
+      setInterval(updateTime, 1000)
+      updateTime()
+
+      // 다크모드 토글
+      function toggleDarkMode() {
+        document.body.classList.toggle("light-mode")
+      }
+
+      // 회원가입 폼 토글
+      function toggleSignup() {
+        const form = document.getElementById("signupForm")
+        form.style.display = form.style.display === "block" ? "none" : "block"
+      }
+    </script>
+  </body>
+</html>
