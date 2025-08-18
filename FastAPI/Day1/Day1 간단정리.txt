@@ -1,0 +1,29 @@
+Meetifyr
+일정·스케줄 조율 도구. 여러 사람이 가능한 시간을 모아 가장 적절한 회의 시간을 잡을 때 사용.
+
+Poetry
+Python 프로젝트 관리 툴.
+
+의존성 관리 (pip + requirements.txt 대체)
+
+패키징 & 배포 지원
+
+pyproject.toml 기반으로 설정
+
+Ruff
+초고속 Python linter & formatter.
+
+코드 스타일 검사 (PEP8, flake8 대체)
+
+자동 수정 기능 (black, isort 일부 역할 대체)
+
+Rust로 구현되어 매우 빠름
+
+Mypy
+Python 정적 타입 체커.
+
+타입 힌트(typing)를 활용해 코드 오류 사전 감지
+
+런타임 전에 타입 안정성을 보장
+
+대규모 프로젝트에서 유지보수에 유용
