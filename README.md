@@ -11,7 +11,7 @@
 ## 🚀 About Me
 - 🎓 **Education**: 오즈코딩스쿨 초격차 캠프 수료 (6개월 과정)
 - 🌱 **Interested In**: Backend Engineering, System Architecture, Clean Code
-- 📧 **Contact**: [본인의이메일@gmail.com](mailto:본인의이메일@gmail.com)
+- 📧 **Contact**: [qogud1994@gmail.com](mailto:qogud1994@gmail.com)
 - 📝 **Blog**: [본인의 블로그 주소 (Velog/Tistory 등)](블로그URL)
 
 <br/>
