@@ -4,7 +4,7 @@
   
   <img src="https://img.insight.co.kr/static/2018/02/03/700/4249k18fbm0u9n4ndex2.jpg"> 
   
- :trophy:  **백엔드 개발자가 되기 위해 열심히 노력중 입니다.** :trophy: 
+ :trophy:  **안녕하세요. 분석하고 실행하며 소통하는 개발자 이배형 입니다.** :trophy: 
 </div>
 
   <!--Body-->
